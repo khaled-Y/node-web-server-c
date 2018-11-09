@@ -1,6 +1,9 @@
 const express = require("express");
 const hbs = require("hbs");
+
+const port = process.env.PORT || 3000;
 let app = express();
+
 const fs = require("fs");
 hbs.registerPartials(__dirname+"/views/partial");
 hbs.registerHelper("GetYeer",()=>{
@@ -43,6 +46,6 @@ app.get("/bad",(req,res)=>{
         errorms:"khaled"
     });
 });
-app.listen(3000,()=>{
-    console.log("server in port 3000");
+app.listen(port,()=>{
+    console.log("server in port ",port);
 });
