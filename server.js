@@ -34,6 +34,7 @@ app.get("/",(req,res)=>{
         res.render("home.hbs",{
             pagetitle:"HOME",
             welcomeMass:"Hi from home",
+            projectName:"Learning Node"
         })
 })
 app.get("/about",(req,res)=>{
@@ -41,6 +42,11 @@ app.get("/about",(req,res)=>{
         pagetitle:"about from about",
     })
 });
+app.get("/project",(req,res)=>{
+    res.render("project.hbs",{
+        projectName:"Learning Node"
+     })
+})
 app.get("/bad",(req,res)=>{
     res.send({
         errorms:"khaled"
