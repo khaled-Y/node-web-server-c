@@ -44,7 +44,7 @@ app.get("/about",(req,res)=>{
 });
 app.get("/project",(req,res)=>{
     res.render("project.hbs",{
-        projectName:"Learning Node"
+        projectName:"Learning Node.js"
      })
 })
 app.get("/bad",(req,res)=>{
